@@ -1,0 +1,191 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linux Command Cheat Sheet</title>
+  <link rel="stylesheet" href="wizardbrew-style.css">
+</head>
+<body>
+  <header>
+    <h1>🐧 Linux Command Cheat Sheet</h1>
+    <p class="subtitle">Quick & Practical</p>
+  </header>
+
+  <section id="file-dir">
+    <h2 class="section-heading">📁 <strong>File &amp; Directory Commands</strong></h2>
+    <table class="cheatsheet">
+      <thead>
+        <tr>
+          <th>🔧 Command</th>
+          <th>📌 Example 1</th>
+          <th>📌 Example 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>cd</code></td>
+          <td><code>cd /etc/nginx</code> – Navigate to config folder</td>
+          <td><code>cd ..</code> – Move up one directory</td>
+        </tr>
+        <tr>
+          <td><code>ls</code></td>
+          <td><code>ls -lh</code> – List with human-readable sizes</td>
+          <td><code>ls -a</code> – Show hidden files</td>
+        </tr>
+        <tr>
+          <td><code>mkdir</code></td>
+          <td><code>mkdir logs</code> – Create a folder named logs</td>
+          <td><code>mkdir -p a/b/c</code> – Create nested folders</td>
+        </tr>
+        <tr>
+          <td><code>rm</code></td>
+          <td><code>rm file.txt</code> – Delete file</td>
+          <td><code>rm -r temp/</code> – Delete folder recursively</td>
+        </tr>
+        <tr>
+          <td><code>cp</code></td>
+          <td><code>cp a.txt b.txt</code> – Copy file</td>
+          <td><code>cp -r src/ dest/</code> – Copy folder recursively</td>
+        </tr>
+        <tr>
+          <td><code>mv</code></td>
+          <td><code>mv old.txt new.txt</code> – Rename file</td>
+          <td><code>mv file.txt /tmp/</code> – Move file to /tmp</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="network">
+    <h2 class="section-heading">🌐 <strong>Network Commands</strong></h2>
+    <table class="cheatsheet">
+      <thead>
+        <tr>
+          <th>🌍 Command</th>
+          <th>📌 Example 1</th>
+          <th>📌 Example 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>ping</code></td>
+          <td><code>ping google.com</code> – Check connectivity</td>
+          <td><code>ping -c 4 8.8.8.8</code> – Send 4 packets</td>
+        </tr>
+        <tr>
+          <td><code>curl</code></td>
+          <td><code>curl https://example.com</code> – Fetch webpage</td>
+          <td><code>curl -I https://example.com</code> – Get headers only</td>
+        </tr>
+        <tr>
+          <td><code>wget</code></td>
+          <td><code>wget file.zip</code> – Download file</td>
+          <td><code>wget -r https://site.com</code> – Recursive download</td>
+        </tr>
+        <tr>
+          <td><code>ip</code></td>
+          <td><code>ip a</code> – Show IP addresses</td>
+          <td><code>ip r</code> – Show routing table</td>
+        </tr>
+        <tr>
+          <td><code>netstat</code></td>
+          <td><code>netstat -tuln</code> – List listening ports</td>
+          <td><code>netstat -p</code> – Show PID/program name</td>
+        </tr>
+        <tr>
+          <td><code>ss</code></td>
+          <td><code>ss -tuln</code> – Show TCP/UDP sockets</td>
+          <td><code>ss -p</code> – Show process using socket</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="bash-rc">
+    <h2 class="section-heading">⚙️ <strong>Bash RC &amp; Shell Customization</strong></h2>
+    <table class="cheatsheet">
+      <thead>
+        <tr>
+          <th>🧠 Command</th>
+          <th>📌 Example 1</th>
+          <th>📌 Example 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>alias</code></td>
+          <td><code>alias ll='ls -la'</code> – Create shortcut</td>
+          <td><code>alias gs='git status'</code> – Git alias</td>
+        </tr>
+        <tr>
+          <td><code>export</code></td>
+          <td><code>export PATH=$PATH:/opt/bin</code> – Add to PATH</td>
+          <td><code>export EDITOR=nano</code> – Set default editor</td>
+        </tr>
+        <tr>
+          <td><code>.bashrc</code></td>
+          <td><code>source ~/.bashrc</code> – Reload bash config</td>
+          <td><code>nano ~/.bashrc</code> – Edit bash config</td>
+        </tr>
+        <tr>
+          <td><code>env</code></td>
+          <td><code>env | grep USER</code> – Show user env var</td>
+          <td><code>env | less</code> – Scroll through env vars</td>
+        </tr>
+        <tr>
+          <td><code>set</code></td>
+          <td><code>set -x</code> – Debug shell commands</td>
+          <td><code>set +x</code> – Turn off debug mode</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="process">
+    <h2 class="section-heading">🔄 <strong>Process &amp; System Monitoring</strong></h2>
+    <table class="cheatsheet">
+      <thead>
+        <tr>
+          <th>🧪 Command</th>
+          <th>📌 Example 1</th>
+          <th>📌 Example 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>ps</code></td>
+          <td><code>ps aux</code> – List all processes</td>
+          <td><code>ps -ef | grep nginx</code> – Search for nginx</td>
+        </tr>
+        <tr>
+          <td><code>top</code></td>
+          <td><code>top</code> – Live process monitor</td>
+          <td><code>top -u parvez</code> – Show Parvez’s processes</td>
+        </tr>
+        <tr>
+          <td><code>htop</code></td>
+          <td><code>htop</code> – Interactive process viewer</td>
+          <td><code>htop -u root</code> – Filter by user</td>
+        </tr>
+        <tr>
+          <td><code>kill</code></td>
+          <td><code>kill 1234</code> – Kill process by PID</td>
+          <td><code>kill -9 1234</code> – Force kill process</td>
+        </tr>
+        <tr>
+          <td><code>nice</code></td>
+          <td><code>nice -n 10 script.sh</code> – Run with priority</td>
+          <td><code>renice -n -5 -p 1234</code> – Change priority of PID</td>
+        </tr>
+        <tr>
+          <td><code>uptime</code></td>
+          <td><code>uptime</code> – Show system load</td>
+          <td><code>uptime -p</code> – Pretty format uptime</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>
