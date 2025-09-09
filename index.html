@@ -1,197 +1,428 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Linux Command Cheat Sheet</title>
-  <link rel="stylesheet" href="wizardstyle.css" />
+  <meta charset="UTF-8">
+  <title>WizardBrew Guide – Linux Cheat Sheet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="wizard-style.css">
+  <script src="script.js"></script>
 </head>
+
 <body>
   <header>
-    <div class="profile">
-      <img src="avatar.png" alt="Parvez Mustak" class="avatar" />
-      <div class="profile-info">
-        <h1>Parvez Mustak</h1>
-        <p class="tagline">DevOps Wizard • Terraform &amp; Kubernetes</p>
-        <div class="social-links">
-          <a href="https://github.com/parvezmustak" target="_blank">🐙 GitHub</a>
-          <a href="https://linkedin.com/in/parvezmustak" target="_blank">🔗 LinkedIn</a>
-          <a href="https://twitter.com/parvezmustak" target="_blank">🐦 Twitter</a>
-        </div>
-      </div>
+    <div class="profile-action-container">
+      <a href="https://github.com/WizardBrew" target="_blank" rel="noopener">
+        <img src="https://avatars.githubusercontent.com/u/91134716?v=4" alt="Profile Photo">
+      </a>
+      <button id="verifyBtn">🏷️ Verify Now Post</button>
+      <button id="notifyBtn">🔔 Notify New Post</button>
     </div>
-    <p class="subtitle">🐧 Linux Command Cheat Sheet — Quick & Practical</p>
+    <h1>🐧 Linux Command Sheet </h1>
+    <div class="bubble-container">
+      <a href="https://devopsenginer.in" class="bubble">🌐 devopsenginer.in</a>
+      <a href="https://github.com/WizardBrew" class="bubble">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/parvezmustak8004/" class="bubble">💼 LinkedIn</a>
+      <a href="mailto:wizardbrew@outlook.com" class="bubble">✉️ Email</a>
+    </div>
   </header>
 
-  <section id="file-dir">
-    <h2 class="section-heading">📁 <strong>File &amp; Directory</strong></h2>
-    <table class="cheatsheet">
-      <thead>
-        <tr>
-          <th>Command</th>
-          <th>Example 1</th>
-          <th>Example 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>cd</code></td>
-          <td><code>cd /etc/nginx</code> – Go to Nginx config</td>
-          <td><code>cd ..</code> – Up one level</td>
-        </tr>
-        <tr>
-          <td><code>ls</code></td>
-          <td><code>ls -lh</code> – Human-readable sizes</td>
-          <td><code>ls -a</code> – Show hidden</td>
-        </tr>
-        <tr>
-          <td><code>mkdir</code></td>
-          <td><code>mkdir logs</code> – Make logs dir</td>
-          <td><code>mkdir -p a/b/c</code> – Nested dirs</td>
-        </tr>
-        <tr>
-          <td><code>rm</code></td>
-          <td><code>rm file.txt</code> – Remove file</td>
-          <td><code>rm -r temp/</code> – Remove folder</td>
-        </tr>
-        <tr>
-          <td><code>cp</code></td>
-          <td><code>cp a.txt b.txt</code> – Copy file</td>
-          <td><code>cp -r src/ dest/</code> – Copy folder</td>
-        </tr>
-        <tr>
-          <td><code>mv</code></td>
-          <td><code>mv old.txt new.txt</code> – Rename</td>
-          <td><code>mv file.txt /tmp/</code> – Move file</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
 
-  <section id="network">
-    <h2 class="section-heading">🌐 <strong>Network</strong></h2>
-    <table class="cheatsheet">
-      <thead>
-        <tr>
-          <th>Command</th>
-          <th>Example 1</th>
-          <th>Example 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>ping</code></td>
-          <td><code>ping google.com</code> – Test reachability</td>
-          <td><code>ping -c 4 8.8.8.8</code> – 4 packets</td>
-        </tr>
-        <tr>
-          <td><code>curl</code></td>
-          <td><code>curl https://example.com</code> – Fetch page</td>
-          <td><code>curl -I https://example.com</code> – Headers only</td>
-        </tr>
-        <tr>
-          <td><code>wget</code></td>
-          <td><code>wget file.zip</code> – Download file</td>
-          <td><code>wget -r https://site.com</code> – Recursive</td>
-        </tr>
-        <tr>
-          <td><code>ip</code></td>
-          <td><code>ip a</code> – Show addresses</td>
-          <td><code>ip r</code> – Show routes</td>
-        </tr>
-        <tr>
-          <td><code>netstat</code></td>
-          <td><code>netstat -tuln</code> – Listening ports</td>
-          <td><code>netstat -p</code> – PID/program</td>
-        </tr>
-        <tr>
-          <td><code>ss</code></td>
-          <td><code>ss -tuln</code> – Sockets</td>
-          <td><code>ss -p</code> – With process</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+  <main>
 
-  <section id="bash-rc">
-    <h2 class="section-heading">⚙️ <strong>Bash RC &amp; Shell</strong></h2>
-    <table class="cheatsheet">
-      <thead>
-        <tr>
-          <th>Command</th>
-          <th>Example 1</th>
-          <th>Example 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>alias</code></td>
-          <td><code>alias ll='ls -la'</code> – Shortcut</td>
-          <td><code>alias gs='git status'</code> – Git alias</td>
-        </tr>
-        <tr>
-          <td><code>export</code></td>
-          <td><code>export PATH=$PATH:/opt/bin</code> – Add PATH</td>
-          <td><code>export EDITOR=nano</code> – Set editor</td>
-        </tr>
-        <tr>
-          <td><code>source ~/.bashrc</code></td>
-          <td><code>source ~/.bashrc</code> – Reload</td>
-          <td><code>nano ~/.bashrc</code> – Edit</td>
-        </tr>
-        <tr>
-          <td><code>env</code></td>
-          <td><code>env | grep USER</code> – Show var</td>
-          <td><code>env | less</code> – Scroll</td>
-        </tr>
-        <tr>
-          <td><code>set</code></td>
-          <td><code>set -x</code> – Debug</td>
-          <td><code>set +x</code> – Turn off</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
 
-  <section id="process">
-    <h2 class="section-heading">🔄 <strong>Process &amp; Monitoring</strong></h2>
-    <table class="cheatsheet">
-      <thead>
-        <tr>
-          <th>Command</th>
-          <th>Example 1</th>
-          <th>Example 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>ps</code></td>
-          <td><code>ps aux</code> – All processes</td>
-          <td><code>ps -ef | grep nginx</code> – Find nginx</td>
-        </tr>
-        <tr>
-          <td><code>top</code></td>
-          <td><code>top</code> – Live view</td>
-          <td><code>top -u parvez</code> – My processes</td>
-        </tr>
-        <tr>
-          <td><code>kill</code></td>
-          <td><code>kill 1234</code> – Stop PID</td>
-          <td><code>kill -9 1234</code> – Force stop</td>
-        </tr>
-        <tr>
-          <td><code>nice</code></td>
-          <td><code>nice -n 10 script.sh</code> – Lower priority</td>
-          <td><code>renice -n -5 -p 1234</code> – Raise priority</td>
-        </tr>
-        <tr>
-          <td><code>uptime</code></td>
-          <td><code>uptime</code> – Load &amp; time</td>
-          <td><code>uptime -p</code> – Pretty uptime</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+
+    <div class="step pink-step">
+      <h2>🗂️ File &amp; Directory Commands</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Command</th>
+            <th>Example 1</th>
+            <th>Example 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Type">📂 Navigation</td>
+            <td data-label="Command"><code>cd</code></td>
+            <td data-label="Example 1"><code>cd /var/log</code> – Go to system logs</td>
+            <td data-label="Example 2"><code>cd ~/projects</code> – Jump to projects</td>
+          </tr>
+          <tr>
+            <td data-label="Type">📋 Listing</td>
+            <td data-label="Command"><code>ls</code></td>
+            <td data-label="Example 1"><code>ls -l</code> – Long format</td>
+            <td data-label="Example 2"><code>ls -lha /etc</code> – All files human-readable</td>
+          </tr>
+          <tr>
+            <td data-label="Type">➕ Creation</td>
+            <td data-label="Command"><code>mkdir</code></td>
+            <td data-label="Example 1"><code>mkdir newdir</code> – Create “newdir”</td>
+            <td data-label="Example 2"><code>mkdir -p a/b/c</code> – Nested dirs</td>
+          </tr>
+          <tr>
+            <td data-label="Type">📝 Viewing</td>
+            <td data-label="Command"><code>cat</code></td>
+            <td data-label="Example 1"><code>cat README.md</code> – Dump file</td>
+            <td data-label="Example 2"><code>cat file1 file2</code> – Concat & view</td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔍 Searching</td>
+            <td data-label="Command"><code>find</code></td>
+            <td data-label="Example 1"><code>find . -name "*.log"</code> – Find logs</td>
+            <td data-label="Example 2"><code>find /home -size +1M</code> – Files >1 MB</td>
+          </tr>
+          
+          <tr>
+            <td data-label="Type">📄 Copy</td>
+            <td data-label="Command"><code>cp</code></td>
+            <td data-label="Example 1"><code>cp a.txt b.txt</code> – Copy file</td>
+            <td data-label="Example 2"><code>cp -r src/ dest/</code> – Copy dir</td>
+          </tr>
+          <tr>
+            <td data-label="Type">🚚 Move</td>
+            <td data-label="Command"><code>mv</code></td>
+            <td data-label="Example 1"><code>mv old.txt new.txt</code> – Rename</td>
+            <td data-label="Example 2"><code>mv *.log archive/</code> – Move logs</td>
+          </tr>
+          <tr>
+            <td data-label="Type">🗑️ Deletion</td>
+            <td data-label="Command"><code>rm</code></td>
+            <td data-label="Example 1"><code>rm file.txt</code> – Delete file</td>
+            <td data-label="Example 2"><code>rm -rf temp/</code> – Force delete dir</td>
+          </tr>
+          <tr>
+            <td data-label="Type">📊 Disk Usage</td>
+            <td data-label="Command"><code>du</code></td>
+            <td data-label="Example 1"><code>du -h .</code> – Folder sizes</td>
+            <td data-label="Example 2"><code>du -sh ~/</code> – Summarize home</td>
+          </tr>
+          <tr>
+            <td data-label="Type">💾 Disk Free</td>
+            <td data-label="Command"><code>df</code></td>
+            <td data-label="Example 1"><code>df -h</code> – FS usage</td>
+            <td data-label="Example 2"><code>df -Th</code> – Type + human</td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔗 Linking <br>
+            </a><br></td>
+            <td data-label="Command"><code>ln</code></td>
+            <td data-label="Example 1"><code>ln -s /usr/bin/python3 python</code> – Symlink </td>
+            <td data-label="Example 2"><code>ln file.txt hardlink.txt</code> – Hard link</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Network -->
+    <div class="step pink-step">
+      <h2>🌐 Network Commands</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Command</th>
+            <th>Example 1</th>
+            <th>Example 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Type">📶 Connectivity</td>
+            <td data-label="Command"><code>ping</code></td>
+            <td data-label="Example 1"><code>ping google.com</code> – Reachability</td>
+            <td data-label="Example 2"><code>ping -c3 1.1.1.1</code> – 3 packets</td>
+          </tr>
+          <tr>
+            <td data-label="Type">🛰️ Trace Route</td>
+            <td data-label="Command"><code>traceroute</code></td>
+            <td data-label="Example 1"><code>traceroute example.com</code></td>
+            <td data-label="Example 2"><code>traceroute -n 8.8.8.8</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🌐 HTTP Client</td>
+            <td data-label="Command"><code>curl</code></td>
+            <td data-label="Example 1"><code>curl https://api.github.com</code></td>
+            <td data-label="Example 2"><code>curl -I https://example.com</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">⬇️ Download</td>
+            <td data-label="Command"><code>wget</code></td>
+            <td data-label="Example 1"><code>wget file.tar.gz</code></td>
+            <td data-label="Example 2"><code>wget -qO- https://site.com</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🕵️ DNS Lookup</td>
+            <td data-label="Command"><code>dig</code></td>
+            <td data-label="Example 1"><code>dig +short example.com</code></td>
+            <td data-label="Example 2"><code>dig @8.8.8.8 example.com</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔌 Socket Info</td>
+            <td data-label="Command"><code>netstat</code></td>
+            <td data-label="Example 1"><code>netstat -tuln</code></td>
+            <td data-label="Example 2"><code>netstat -p</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔌 Socket Info</td>
+            <td data-label="Command"><code>ss</code></td>
+            <td data-label="Example 1"><code>ss -tuln</code></td>
+            <td data-label="Example 2"><code>ss -p</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">⚙️ IP Config</td>
+            <td data-label="Command"><code>ip</code></td>
+            <td data-label="Example 1"><code>ip addr show</code></td>
+            <td data-label="Example 2"><code>ip route show</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔍 Port Scan</td>
+            <td data-label="Command"><code>nmap</code></td>
+            <td data-label="Example 1"><code>nmap localhost</code></td>
+            <td data-label="Example 2"><code>nmap -sS 192.168.1.0/24</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Permissions -->
+    <div class="step pink-step">
+      <h2>🔐 Permissions Management</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Command</th>
+            <th>Example 1</th>
+            <th>Example 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Type">🔑 Modify Mode</td>
+            <td data-label="Command"><code>chmod</code></td>
+            <td data-label="Example 1"><code>chmod 755 script.sh</code></td>
+            <td data-label="Example 2"><code>chmod -R u+rwX,g-w,o-rwx dir/</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">👤 Change Owner</td>
+            <td data-label="Command"><code>chown</code></td>
+            <td data-label="Example 1"><code>chown parvez file.txt</code></td>
+            <td data-label="Example 2"><code>chown -R user:group dir/</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔒 Default Mask</td>
+            <td data-label="Command"><code>umask</code></td>
+            <td data-label="Example 1"><code>umask 022</code></td>
+            <td data-label="Example 2"><code>umask 077</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">📜 Get ACL</td>
+            <td data-label="Command"><code>getfacl</code></td>
+            <td data-label="Example 1"><code>getfacl file.txt</code></td>
+            <td data-label="Example 2"><code>getfacl -R dir/</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🛠️ Set ACL</td>
+            <td data-label="Command"><code>setfacl</code></td>
+            <td data-label="Example 1"><code>setfacl -m u:alice:rw file.txt</code></td>
+            <td data-label="Example 2"><code>setfacl -x g:staff file.txt</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- systemd -->
+    <div class="step pink-step">
+      <h2>🔧 systemd (systemctl)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Command</th>
+            <th>Example 1</th>
+            <th>Example 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Type">ℹ️ Status</td>
+            <td data-label="Command"><code>systemctl status</code></td>
+            <td data-label="Example 1"><code>systemctl status sshd</code></td>
+            <td data-label="Example 2"><code>systemctl status nginx.service</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">▶️ Start</td>
+            <td data-label="Command"><code>systemctl start</code></td>
+            <td data-label="Example 1"><code>systemctl start sshd</code></td>
+            <td data-label="Example 2"><code>systemctl start apache2</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">⏹️ Stop</td>
+            <td data-label="Command"><code>systemctl stop</code></td>
+            <td data-label="Example 1"><code>systemctl stop sshd</code></td>
+            <td data-label="Example 2"><code>systemctl stop apache2</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔄 Restart</td>
+            <td data-label="Command"><code>systemctl restart</code></td>
+            <td data-label="Example 1"><code>systemctl restart sshd</code></td>
+            <td data-label="Example 2"><code>systemctl restart apache2</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🛡️ Enable</td>
+            <td data-label="Command"><code>systemctl enable</code></td>
+            <td data-label="Example 1"><code>systemctl enable sshd</code></td>
+            <td data-label="Example 2"><code>systemctl enable nginx</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">❌ Disable</td>
+            <td data-label="Command"><code>systemctl disable</code></td>
+            <td data-label="Example 1"><code>systemctl disable sshd</code></td>
+            <td data-label="Example 2"><code>systemctl disable nginx</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔃 Reload</td>
+            <td data-label="Command"><code>systemctl daemon-reload</code></td>
+            <td data-label="Example 1"><code>systemctl daemon-reload</code></td>
+            <td data-label="Example 2"><code>systemctl reload-or-restart sshd</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">📜 List Units</td>
+            <td data-label="Command"><code>systemctl list-unit-files</code></td>
+            <td data-label="Example 1"><code>systemctl list-unit-files</code></td>
+            <td data-label="Example 2"><code>systemctl list-units --type=service</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- service -->
+    <div class="step pink-step">
+      <h2>⚙️ Service Management (`service`)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Command</th>
+            <th>Example 1</th>
+            <th>Example 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Type">ℹ️ Status</td>
+            <td data-label="Command"><code>service &lt;name&gt; status</code></td>
+            <td data-label="Example 1"><code>service sshd status</code></td>
+            <td data-label="Example 2"><code>service apache2 status</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">▶️ Start</td>
+            <td data-label="Command"><code>service &lt;name&gt; start</code></td>
+            <td data-label="Example 1"><code>service sshd start</code></td>
+            <td data-label="Example 2"><code>service apache2 start</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">⏹️ Stop</td>
+            <td data-label="Command"><code>service &lt;name&gt; stop</code></td>
+            <td data-label="Example 1"><code>service sshd stop</code></td>
+            <td data-label="Example 2"><code>service apache2 stop</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔄 Restart</td>
+            <td data-label="Command"><code>service &lt;name&gt; restart</code></td>
+            <td data-label="Example 1"><code>service sshd restart</code></td>
+            <td data-label="Example 2"><code>service apache2 restart</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔃 Reload</td>
+            <td data-label="Command"><code>service &lt;name&gt; reload</code></td>
+            <td data-label="Example 1"><code>service sshd reload</code></td>
+            <td data-label="Example 2"><code>service apache2 reload</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- .bashrc snippets -->
+    <div class="step pink-step">
+      <h2>📝 .bashrc Snippets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Snippet</th>
+            <th>Example 1</th>
+            <th>Example 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Type">🔗 Alias</td>
+            <td data-label="Snippet"><code>alias</code></td>
+            <td data-label="Example 1"><code>alias ll='ls -la'</code></td>
+            <td data-label="Example 2"><code>alias gs='git status'</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🌿 Export</td>
+            <td data-label="Snippet"><code>export</code></td>
+            <td data-label="Example 1"><code>export PATH=$PATH:/opt/bin</code></td>
+            <td data-label="Example 2"><code>export EDITOR=vim</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🎨 PS1 Prompt <br><a href="https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html" class="star-link"
+              aria-label="Explained">
+              🌟 Click me</td>
+            <td data-label="Snippet"><code>PS1</code></td>
+            <td data-label="Example 1"><code>PS1="\u@\h:\w\$ "</code></td>
+            <td data-label="Example 2"><code>PS1="
+    
+    \[\e[32m\]
+    
+    \u@\h
+    
+    \[\e[m\]
+    
+    :\w\$ "</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🏭 Function</td>
+            <td data-label="Snippet"><code>mkcd(){ mkdir -p "$1"; cd "$1"; }</code></td>
+            <td data-label="Example 1"><code>mkcd newdir</code> – Make+cd</td>
+            <td data-label="Example 2"><code>extract(){ tar -xvf "$1"; }</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">📜 Source</td>
+            <td data-label="Snippet"><code>source</code></td>
+            <td data-label="Example 1"><code>source ~/.bash_aliases</code></td>
+            <td data-label="Example 2"><code>source /etc/bash_completion</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔍 History</td>
+            <td data-label="Snippet"><code>HISTSIZE/HISTCONTROL</code></td>
+            <td data-label="Example 1"><code>export HISTSIZE=2000</code></td>
+            <td data-label="Example 2"><code>export HISTCONTROL=ignoredups:erasedups</code></td>
+          </tr>
+          <tr>
+            <td data-label="Type">🔔 Shell Options</td>
+            <td data-label="Snippet"><code>shopt</code></td>
+            <td data-label="Example 1"><code>shopt -s histappend</code></td>
+            <td data-label="Example 2"><code>shopt -s globstar</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </main>
+
+  <footer>
+    &copy; 2025 WizardBrew. All rights reserved | Contact- wizardbrew@outlook.com
+  </footer>
 </body>
+
 </html>
