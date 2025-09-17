@@ -1,5 +1,6 @@
 
 # Wizard Cheat Sheet
+#Link: https://wizardbrew.github.io/LinuxCommandsheet/
 cat << 'EOF' > linux_cheat_sheet.md
 # 🐧 Linux Command Cheat Sheet
 ## 🗂️ File & Directory Commands
