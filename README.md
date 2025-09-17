@@ -1,8 +1,7 @@
   
 <p class="has-line-data" data-line-start="0" data-line-end="1">#Wizard Cheat Sheet</p>
 <h1 class="code-line" data-line-start=1 data-line-end=2 ><a id="_1"></a>-----------------------------------------------------------------------------</h1>
-<h1 class="code-line" data-line-start=2 data-line-end=3 ><a id="generatelinuxcheatsheetsh_2"></a><a href="http://generate-linux-cheatsheet.sh">generate-linux-cheatsheet.sh</a></h1>
-<h1 class="code-line" data-line-start=3 data-line-end=4 ><a id="Generates_linux_cheat_sheetmd_in_your_current_directory_3"></a>Generates linux_cheat_sheet.md in your current directory.</h1>
+<h1 class="code-line" data-line-start=2 data-line-end=3 ><a id="linuxcheatsheet"></a><a href="http://generate-linux-cheatsheet.sh">generate-linux-cheatsheet.sh</a></h1>
 <h1 class="code-line" data-line-start=4 data-line-end=5 ><a id="_4"></a>-----------------------------------------------------------------------------</h1>
 <p class="has-line-data" data-line-start="6" data-line-end="7">cat &lt;&lt; ‘EOF’ &gt; linux_cheat_sheet.md</p>
 <h1 class="code-line" data-line-start=7 data-line-end=8 ><a id="_Linux_Command_Cheat_Sheet_7"></a>🐧 Linux Command Cheat Sheet</h1>
