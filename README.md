@@ -1,5 +1,5 @@
   
-<p class="has-line-data" data-line-start="0" data-line-end="1">#!/usr/bin/env bash</p>
+#<p class="has-line-data" data-line-start="0" data-line-end="1">#!/usr/bin/env bash</p>
 <h1 class="code-line" data-line-start=1 data-line-end=2 ><a id="_1"></a>-----------------------------------------------------------------------------</h1>
 <h1 class="code-line" data-line-start=2 data-line-end=3 ><a id="generatelinuxcheatsheetsh_2"></a><a href="http://generate-linux-cheatsheet.sh">generate-linux-cheatsheet.sh</a></h1>
 <h1 class="code-line" data-line-start=3 data-line-end=4 ><a id="Generates_linux_cheat_sheetmd_in_your_current_directory_3"></a>Generates linux_cheat_sheet.md in your current directory.</h1>
