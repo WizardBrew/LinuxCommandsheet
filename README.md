@@ -1,13 +1,3 @@
-Services
-Documents
------------------------------------------------------------------------------.md
-Preview as 
-Export as 
-Save to 
-Import from 
-Document Name
------------------------------------------------------------------------------.md
-MarkdownPreviewToggle Mode
   
 <p class="has-line-data" data-line-start="0" data-line-end="1">#!/usr/bin/env bash</p>
 <h1 class="code-line" data-line-start=1 data-line-end=2 ><a id="_1"></a>-----------------------------------------------------------------------------</h1>
